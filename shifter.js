@@ -11,6 +11,6 @@ function shiftToLeft(arr, ind){
     arr[ind]   = temp1;
     return arr;
   }else{
-  	console.log("out of bounds");
+    console.log("out of bounds");
   }
 }
