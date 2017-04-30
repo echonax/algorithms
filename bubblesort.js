@@ -7,10 +7,10 @@ function bubbleSort(array){
     array[biggerOnesIndex] = temp;
     swaps++;
   }
-	var sorted = false;
+  var sorted = false;
   var lastUnsorted = array.length - 1;
-	while(!sorted){
-  	sorted = true;
+  while(!sorted){
+    sorted = true;
     for(var i = 0; i < lastUnsorted; i++){
       var currentElement = array[i];
       var nextElement = array[i+1];
