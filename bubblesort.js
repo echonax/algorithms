@@ -25,3 +25,31 @@ function bubbleSort(array){
   console.log("First Element: " + array[0]);
   console.log("Last Element: " + array[array.length-1]);
 }
+
+
+/*unoptimized
+
+function bSort(arr){
+  var swaps = 0;
+  function swap(array, biggerOnesIndex, smallerOnesIndex){
+    var temp = array[smallerOnesIndex];
+    array[smallerOnesIndex] = array[biggerOnesIndex];
+    array[biggerOnesIndex] = temp;
+    swaps++;
+  }
+  var swapped = true;
+  while(swapped){  
+  	swapped = false;
+  	for(var i = 0; i < arr.length-1; ++i){
+      if(arr[i] < arr[i+1]){
+      }else{
+        swapped = true;
+        swap(arr, i+1, i);
+      }
+    }
+  }
+  console.log(arr);
+  console.log("Swaps:" + swaps);
+}
+
+*/
