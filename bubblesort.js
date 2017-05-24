@@ -28,28 +28,30 @@ function bubbleSort(array){
 
 
 /*unoptimized
-
-function bSort(arr){
-  var swaps = 0;
-  function swap(array, biggerOnesIndex, smallerOnesIndex){
-    var temp = array[smallerOnesIndex];
-    array[smallerOnesIndex] = array[biggerOnesIndex];
-    array[biggerOnesIndex] = temp;
-    swaps++;
-  }
-  var swapped = true;
-  while(swapped){  
-  	swapped = false;
-  	for(var i = 0; i < arr.length-1; ++i){
-      if(arr[i] < arr[i+1]){
-      }else{
-        swapped = true;
-        swap(arr, i+1, i);
-      }
-    }
-  }
-  console.log(arr);
-  console.log("Swaps:" + swaps);
+function swap(index1, index2, array){
+    var temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
 }
+
+var numberOfSwaps = 0;
+for (var i = 0; i < n; i++) {
+
+    for (var j = 0; j < n - 1; j++) {
+        // Swap adjacent elements if they are in decreasing order
+        if (a[j] > a[j + 1]) {
+            swap(j, j + 1, a);
+            numberOfSwaps++;
+        }
+    }
+
+    // If no elements were swapped during a traversal, array is sorted
+    if (numberOfSwaps == 0) {
+        break;
+    }
+}
+console.log("Array is sorted in " + numberOfSwaps + " swaps.");
+console.log("First Element: " + a[0]);
+console.log("Last Element: " + a[a.length-1]);
 
 */
